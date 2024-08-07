@@ -1,0 +1,10 @@
+node_modules/
+src/
+.git/
+.gitignore
+.npmignore
+rollup.config.js
+tsconfig.json
+package-lock.json
+prompt.js
+directory_structure.txt

@@ -1,0 +1,10 @@
+# Node modules
+node_modules/
+
+# Build directories
+dist/
+build/
+
+# Ignore other unnecessary files
+directory_structure.txt
+prompt.js

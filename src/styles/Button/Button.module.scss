@@ -1,0 +1,149 @@
+// Button.scss
+
+.button {
+	position: relative;
+	overflow: hidden; // Required for ripple to not overflow
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	cursor: pointer;
+	padding: 0.5em 1em;
+	transition: all 0.3s ease;
+	font-size: 1rem;
+
+	&.solid {
+		background-color: #f0f0f0;
+		color: #333;
+
+		&.primary {
+			background-color: #007bff;
+			color: #fff;
+		}
+
+		&.secondary {
+			background-color: #6c757d;
+			color: #fff;
+		}
+
+		&.success {
+			background-color: #28a745;
+			color: #fff;
+		}
+
+		&.warning {
+			background-color: #ffc107;
+			color: #333;
+		}
+
+		&.danger {
+			background-color: #dc3545;
+			color: #fff;
+		}
+	}
+
+	&.bordered {
+		border: 1px solid currentColor;
+		background: transparent;
+	}
+
+	&.light {
+		background-color: #f8f9fa;
+		color: #333;
+	}
+
+	&.flat {
+		background: none;
+		color: #007bff;
+	}
+
+	&.faded {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	&.shadow {
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	&.ghost {
+		background: none;
+		border: none;
+	}
+
+	&.sm {
+		padding: 0.25em 0.5em;
+		font-size: 0.875rem;
+	}
+
+	&.md {
+		padding: 0.5em 1em;
+		font-size: 1rem;
+	}
+
+	&.lg {
+		padding: 0.75em 1.5em;
+		font-size: 1.125rem;
+	}
+
+	&.full-width {
+		width: 100%;
+	}
+
+	&.icon-only {
+		padding: 0.5em;
+		width: 2.5em;
+		height: 2.5em;
+		justify-content: center;
+	}
+
+	&.disabled,
+	&[disabled] {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+	&.loading {
+		pointer-events: none;
+
+		.children {
+			opacity: 0;
+		}
+	}
+
+	.start-content,
+	.end-content,
+	.children {
+		margin: 0 0.5em;
+	}
+
+	&.no-ripple {
+		overflow: visible; // Allow for no ripple effects
+	}
+
+	&.no-animation {
+		transition: none;
+	}
+
+	// Ripple effect
+	.ripple {
+		position: absolute;
+		border-radius: 50%;
+		background-color: rgba(
+			255,
+			255,
+			255,
+			0.7
+		); // Customize the ripple color here
+		transform: scale(0);
+		animation: ripple-animation 0.6s linear;
+		pointer-events: none; // Ensure ripple does not interfere with button clicks
+	}
+
+	@keyframes ripple-animation {
+		to {
+			transform: scale(4); // Adjust scale for ripple size
+			opacity: 0;
+		}
+	}
+}

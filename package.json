@@ -29,6 +29,10 @@
     "react-dom": "^18.3.1",
     "tslib": "^2.6.3"
   },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
   "files": [
     "dist",
     "README.md",

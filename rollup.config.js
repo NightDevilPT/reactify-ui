@@ -11,7 +11,7 @@ export default {
     format: 'cjs', // CommonJS format
     sourcemap: true,
   },
-  external: ['react', 'react-dom'],
+  external: ['react', 'react-dom', 'react/jsx-runtime'],
   plugins: [
     postcss({
       modules: true, // Enable CSS Modules
@@ -23,7 +23,12 @@ export default {
         autoprefixer(), // Add vendor prefixes
       ],
     }),
-    typescript(),
+    typescript({
+      tsconfig: './tsconfig.json',
+      outDir: 'dist',
+      declaration: true,
+      declarationDir: 'dist/types',
+    }),
     babel({
       babelHelpers: 'bundled',
       exclude: 'node_modules/**',

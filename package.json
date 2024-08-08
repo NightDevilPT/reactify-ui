@@ -1,5 +1,5 @@
 {
-  "name": "reactify-ui",
+  "name": "ui-kit-glimmer",
   "version": "1.0.0",
   "description": "A library of highly customizable React components designed to simplify and enhance the creation of form elements with stylish and responsive user interfaces.",
   "main": "dist/index.js",
@@ -40,10 +40,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NightDevilPT/reactify-ui.git"
+    "url": "git+https://github.com/NightDevilPT/ui-kit-glimmer.git"
   },
   "bugs": {
-    "url": "https://github.com/NightDevilPT/reactify-ui/issues"
+    "url": "https://github.com/NightDevilPT/ui-kit-glimmer/issues"
   },
-  "homepage": "https://github.com/NightDevilPT/reactify-ui#readme"
+  "homepage": "https://github.com/NightDevilPT/ui-kit-glimmer#readme"
 }
